@@ -1,0 +1,18 @@
+function bubbleSort(arr = []) { // 冒泡
+    var len = arr.length;
+    for (var i = 0; i < len; i++) {
+        for(var j = 0; j < len - 1 - i; j++) {
+            if (arr[j] > arr[j + 1]) {
+                var temp = arr[j + 1];
+                arr[j + 1] = arr[j];
+                arr[j] = temp;
+            }
+        }
+    }
+    return arr;
+}
+
+arr.sort((a, b) => {
+    // 返回 -1 不交换位置
+    // 返回 1 交换位置
+})
