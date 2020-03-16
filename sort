@@ -17,6 +17,19 @@ function bubbleSort(arr = []) {
     return arr;
 }
 
+function selectSort(array) { // 选择排序 选择最大的或者最小的
+  var length = array.length, min;
+  for (var i = 0; i < length - 1; i++) {
+    min = i;
+    for (var j = i + 1; j < length; j++) {
+      array[j] < array[min] && (min = j); //记住最小数的下标
+    }
+    min!=i && swap(i,min,array);
+  }
+  return array;
+}
+
+
 function quickSort(arr = []) { // 快速排序
     if (arr.length <= 1) { return arr}
     const pivotIndex = Math.floor(arr.length / 2);
