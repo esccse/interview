@@ -29,6 +29,20 @@ function selectSort(array) { // 选择排序 选择最大的或者最小的
   return array;
 }
 
+function insertionSort(arr) { // 插入排序
+    var len = arr.length;
+    var preIndex, current;
+    for (var i = 1; i < len; i++) {
+        preIndex = i - 1;
+        current = arr[i];
+        while (preIndex >= 0 && arr[preIndex] > current) {
+            arr[preIndex + 1] = arr[preIndex];
+            preIndex--;
+        }
+        arr[preIndex + 1] = current;
+    }
+    return arr;
+}
 
 function quickSort(arr = []) { // 快速排序
     if (arr.length <= 1) { return arr}
